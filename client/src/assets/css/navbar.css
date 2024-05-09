@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  background-color: aquamarine;
+  color: antiquewhite;
+  padding-inline: 45px;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  margin-right: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.nvbar-link {
+  color: blue;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.nvbar-link:hover {
+  text-decoration: underline;
+}
