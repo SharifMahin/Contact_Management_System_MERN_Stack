@@ -1,0 +1,24 @@
+.home {
+  display: flex;
+  color: beige;
+  flex-direction: column;
+  align-items: center;
+  height: 92vh;
+  padding-inline: 30px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../homepage.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.home-title {
+  font-size: 2rem;
+  margin-top: 200px;
+  word-spacing: 1%;
+}
+
+.home-description {
+  font-size: 1.2 rem;
+  margin-top: 10px;
+}

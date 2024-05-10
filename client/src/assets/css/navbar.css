@@ -7,7 +7,7 @@
   display: flex;
   justify-content: space-between;
   padding: 12px;
-  background-color: aquamarine;
+  background-color: #804eaf;
   color: antiquewhite;
   padding-inline: 45px;
 }
@@ -21,7 +21,7 @@
   font-size: 1.8rem;
   margin-right: 20px;
   text-decoration: none;
-  color: white;
+  color: rgb(250, 4, 4);
 }
 
 .navbar-right {
@@ -30,7 +30,7 @@
 }
 
 .nvbar-link {
-  color: blue;
+  color: rgb(10, 10, 10);
   text-decoration: none;
   margin-left: 20px;
 }
