@@ -14,7 +14,7 @@ const Register = () => {
   });
   const inputHandler = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
-    console.log(values);
+    //console.log(values);
   };
 
   const [errors, seterrors] = useState({});
@@ -23,7 +23,7 @@ const Register = () => {
     event.preventDefault();
     const errs = Validation(values);
     seterrors(errs);
-    if (errors.name === "" && errors.email === "" && errors.password === "") {
+    if (errs.name === "" && errs.email === "" && errs.password === "") {
       axios
         .post("http://localhost:3000/api/register", values)
         .then((res) => {
@@ -32,7 +32,13 @@ const Register = () => {
             autoClose: 2000,
           });
         })
-        .catch((err) => {});
+        .catch((err) => {
+          if (err.response.data.errors) {
+            setserverErrors(err.response.data.errors);
+          } else {
+            console.log(err);
+          }
+        });
     }
   };
 
@@ -84,6 +90,12 @@ const Register = () => {
               <span className="errors">{errors.password}</span>
             )}
           </div>
+          {serverErrors.length > 0 &&
+            serverErrors.map((error, index) => (
+              <p className="error" key={index}>
+                {error.msg}
+              </p>
+            ))}
           <button className="form-btn">Register</button>
           <p>
             Already registered? <Link to="/login">Login</Link>
